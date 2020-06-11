@@ -11,7 +11,7 @@ function Home(){
     },[  ])
 
     const fetchData = ()=>{
-        axios.get('http://rap2.taobao.org:38080/app/mock/243407/test/2020128195616')
+        axios.get('https://www.fastmock.site/mock/aeaf8583f965de272b74d45fc0c60a31/train/home')
         .then((res)=>{
             setData(res.data);
         },(error)=>{
