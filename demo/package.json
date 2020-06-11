@@ -1,7 +1,7 @@
 {
   "name": "demo",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://shaolian-lh.github.io/train/demo/build",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
