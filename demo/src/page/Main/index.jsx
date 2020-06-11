@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as BRouter, Route } from 'react-router-dom';
+import { Route , HashRouter} from 'react-router-dom';
 import { RouterConfig } from '../../config/routerConfig';
 function Main(){
     return (
         <Fragment>
-            <BRouter>
+            <HashRouter>
                 {
                     RouterConfig.map((item, index)=>{
                         return <Route key={ index } path = { item.path } exact={item.exact} component = { item.component } />
                     })
                 }
-            </BRouter>
+            </HashRouter>
         </Fragment>
     )
 }
