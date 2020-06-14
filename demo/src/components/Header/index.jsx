@@ -28,13 +28,13 @@ const Header = () => {
     const menuContent = ( style ) => (
         <Menu mode = { style } className = "header-menu">
             <Menu.Item className="sl-menu-item">
-                <a href="/#/" target="_self">首页</a>
+                <a href="/train/demo/build/#/" target="_self">首页</a>
             </Menu.Item>
             <Menu.Item className="sl-menu-item">
-                <a href="/#/news" target="_self">新闻</a>
+                <a href="/train/demo/build/#/news" target="_self">新闻</a>
             </Menu.Item>
             <Menu.Item className="sl-menu-item">
-                <a href="/#/about" target="_self">关于我们</a>
+                <a href="/train/demo/build/#/about" target="_self">关于我们</a>
             </Menu.Item>
         </Menu>
     )
