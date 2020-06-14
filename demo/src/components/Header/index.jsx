@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Menu, Col, Button, Dropdown } from 'antd';
 import { PicRightOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import './style.scss';
 const Header = () => {
 
@@ -28,13 +29,13 @@ const Header = () => {
     const menuContent = ( style ) => (
         <Menu mode = { style } className = "header-menu">
             <Menu.Item className="sl-menu-item">
-                <a href="/train/demo/build/#/" target="_self">首页</a>
+                <Link to="/">首页</Link>
             </Menu.Item>
             <Menu.Item className="sl-menu-item">
-                <a href="/train/demo/build/#/news" target="_self">新闻</a>
+                <Link to="/news">新闻</Link>
             </Menu.Item>
             <Menu.Item className="sl-menu-item">
-                <a href="/train/demo/build/#/about" target="_self">关于我们</a>
+                <Link to="/about">关于我们</Link>
             </Menu.Item>
         </Menu>
     )

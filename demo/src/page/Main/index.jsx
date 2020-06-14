@@ -7,15 +7,15 @@ import './style.scss';
 function Main(){
     return (
         <div id="main">
-            <Header />
             <HashRouter>
+                <Header />
                 {
                     RouterConfig.map((item, index)=>{
                         return <Route key={ index } path = { item.path } exact={item.exact} component = { item.component } />
                     })
                 }
+                <Footer/>
             </HashRouter>
-            <Footer/>
         </div>
     )
 }
