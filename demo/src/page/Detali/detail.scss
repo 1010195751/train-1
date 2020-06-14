@@ -350,3 +350,45 @@ em > code {
         font-size: 12px;
     }
 }
+@media screen and (max-width: 500px) {
+    #detail-note-main-div {
+        min-width: 100%;
+        padding: 0;
+    }
+    .detail-note-title h1{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    #detail-note-main-div h2,
+    #detail-note-main-div h3,
+    #detail-note-main-div h4,
+    #detail-note-main-div h5,
+    #detail-note-main-div h6{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .detail-note-body p{
+        padding: 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: KaiTi;
+    }
+    #detail-note-main-div ul li{
+        font: normal 14px/22px KaiTi,STKaiti;
+    }
+    #detail-note-main-div table th{
+        font: normal 14px/14px KaiTi,STKaiti;
+        text-align: center;
+    }
+    #detail-note-main-div table td{
+        font: normal 14px/14px KaiTi,STKaiti;
+    }
+    
+    .nav-tiitle{
+        font-size: 14px;
+    }
+    #detailed-nav .ant-anchor-link-title{
+        font-size: 12px;
+    }
+}

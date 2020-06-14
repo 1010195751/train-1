@@ -1,0 +1,91 @@
+#current-news-main-div {
+    position: relative;
+    width: 90%;
+    text-align: center;
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a, a:hover, a:visited, a:active {
+        color: inherit;
+    }
+    .news-item {
+        display: inline-block;
+        width: 20%;
+    }
+    .news-item:not(last-child) {
+        margin-right: 10px;
+    }
+    .news-item {
+        display: inline-block;
+        height: 240px;
+        text-align: center;
+        .news-item-img {
+            display: inline-block;
+            width: 80%;
+            width: 160px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .news-title {
+            text-align: left;
+            font-weight: bold;
+        }
+        .news-desc {
+            text-align: left;
+            font-size: 12px;
+            text-indent: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #current-news-main-div {
+        .news-item {
+            width: 45%;
+            height: auto;
+            .news-item-img {
+                display: inline-block;
+                width: 80%;
+                width: 160px;
+                height: 120px;
+                margin-bottom: 10px;
+            }
+            .news-title {
+                padding: 0px 40px;
+                text-align: left;
+                font-weight: bold;
+            }
+            .news-desc {
+                position: relative;
+                padding: 0px 40px;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    #current-news-main-div {
+        .news-item {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            .news-item-img {
+                display: inline-block;
+                width: 80%;
+                width: 160px;
+                height: 120px;
+                margin-bottom: 10px;
+            }
+            .news-title {
+                padding: 0px 40px;
+                text-align: left;
+                font-weight: bold;
+            }
+            .news-desc {
+                position: relative;
+                padding: 0px 40px;
+            }
+        }
+    }
+}

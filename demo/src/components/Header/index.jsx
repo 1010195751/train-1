@@ -42,11 +42,11 @@ const Header = () => {
     return (
         <div id = "header-main-div">
             <Col xs = { 0 } sm = { 24 } md = { 24 } lg = { 24 } xl = { 24 } xxl = { 24 }>
-                <p className = "header-img">虚拟科技</p>
+                <p className = "header-img">DBD</p>
                 { menuContent("horizontal") }
             </Col>
             <Col xs = { 24 } sm = { 0 } md = { 0 } lg = { 0 } xl = { 0 } xxl = { 0 }>
-            <p className = "header-img">虚拟科技</p>
+                <p className = "header-img">DBD</p>
                 <Dropdown className = "header-dropdown" overlay={ menuContent("vertical") } placement="bottomCenter">
                     <Button><PicRightOutlined /></Button>
                 </Dropdown>

@@ -3,6 +3,7 @@ import Request from '../../config/Fetch';
 import { Link } from 'react-router-dom';
 import './news.scss';
 import NewsItem from './NewsItem';
+import SubTitle from '../../components/SubTitle';
 
 function News (){
 
@@ -30,10 +31,7 @@ function News (){
 
     return (
         <div id = "news-main-div">
-            <div className = "news-div-header">
-                <p className = "news-header-title">最新新闻</p>
-                <div className = "news-header-break"></div>
-            </div>
+            <SubTitle title = { "最新新闻" } />
             {
                 listData.length !== 0 && listData.map((item, index)=>{
                     return (
