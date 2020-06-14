@@ -9,4 +9,7 @@
 * 个人展示页：https://shaolian-lh.github.io/train/secondDay/showpage/index.html
 
 #### 第四天
-* 弹幕墙（JQ插件改写至bulletScreen）：https://shaolian-lh.github.io/train/fourthDay/danmuku/index.html
+* 弹幕墙（JQ插件改写自bulletScreen）：https://shaolian-lh.github.io/train/fourthDay/danmuku/index.html
+
+#### 第六天
+* 仿企业网：https://shaolian-lh.github.io/train/demo/build/#
