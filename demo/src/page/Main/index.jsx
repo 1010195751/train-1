@@ -3,6 +3,7 @@ import { Route , HashRouter} from 'react-router-dom';
 import { RouterConfig } from '../../config/routerConfig';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { BackTop } from 'antd';
 import './style.scss';
 function Main(){
     return (
@@ -14,6 +15,7 @@ function Main(){
                         return <Route key={ index } path = { item.path } exact={item.exact} component = { item.component } />
                     })
                 }
+                <BackTop />
                 <Footer/>
             </HashRouter>
         </div>
