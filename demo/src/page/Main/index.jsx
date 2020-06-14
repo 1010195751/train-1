@@ -1,9 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Route , HashRouter} from 'react-router-dom';
 import { RouterConfig } from '../../config/routerConfig';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import './style.scss';
 function Main(){
     return (
-        <Fragment>
+        <div id="main">
+            <Header />
             <HashRouter>
                 {
                     RouterConfig.map((item, index)=>{
@@ -11,7 +15,8 @@ function Main(){
                     })
                 }
             </HashRouter>
-        </Fragment>
+            <Footer/>
+        </div>
     )
 }
 export default Main;
