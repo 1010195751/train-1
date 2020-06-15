@@ -12,7 +12,7 @@
                 display: 'inline-block',
                 color: `rgb(${r},${g},${b})`,
                 right: 0,
-                top: (Math.floor(Math.random() * target.height()) - 24) + "px",
+                top: (Math.floor(Math.random() * target.height()) - 12) + "px",
             });
             newDanMuku.css({
                 width: $(newDanMuku).width()
