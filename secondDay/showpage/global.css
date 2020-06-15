@@ -32,13 +32,15 @@ html, body {
     line-height: 50px;
 }
 .left-header {
+    display: inline-block;
     position: relative;
     font-size: 14px;
-    float: left;
 }
 .right-header {
+    position: absolute;
+    right: 0;
+    display: inline-block;
     font-size: 14px;
-    float: right;
 }
 .footer {
     font-size: 14px;
@@ -159,7 +161,7 @@ a, a:visited, a:link {
 @media (max-width: 500px){
     .wrap{
         width: 360px;
-        left: calc(50% - 200px);
+        left: calc(50% - 180px);
     }
     .info-group {
         width: 360px;
