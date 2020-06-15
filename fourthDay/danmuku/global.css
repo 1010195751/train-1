@@ -46,8 +46,9 @@ html, body {
 }
 .danmuku {
     width: auto;
-    min-width: 180px;
-    max-width: 600px;
+    min-width: 280px;
+    max-width: 1200px;
+    line-break: normal;
     text-overflow: ellipsis;
 }
 #danmuku-input{
