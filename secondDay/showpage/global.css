@@ -76,13 +76,13 @@ html, body {
 .show-item {
     display: inline-block;
     position: relative;
-    width: 270px;
+    width: calc(25% - 27px);
     max-height: 320px;
     border: solid 1px grey;
     margin-bottom: 10px;
 }
-.show-item:not(last-child) {
-    margin-right: 20px;
+.show-item:not(:nth-child(4n+0)) {
+    margin-right: 28px;
 }
 .show-item img{
     position: relative;
@@ -131,7 +131,7 @@ html, body {
 a, a:visited, a:link {
     color: white;
 }
-@media (max-width: 1250px){
+@media (min-width:790px) and (max-width: 1250px){
     .wrap{
         width: 800px;
         left: calc(50% - 400px);
@@ -141,6 +141,9 @@ a, a:visited, a:link {
     }
     .self-wrap {
         width: 800px;
+    }
+    .show-item img {
+        max-width: 160px;
     }
 }
 @media (max-width: 800px){
@@ -154,23 +157,44 @@ a, a:visited, a:link {
     .self-wrap {
         width: 600px;
     }
+    .show-item img {
+        max-width: 120px;
+    }
+    .show-item:not(:nth-child(4n+0)) {
+        margin-right: 28px;
+    }
     .self-wrap p {
-        max-width: 400px;
+        max-width: 360px;
+        text-indent: 2rem;
+        font-size: 16px;
     }
 }
 @media (max-width: 500px){
     .wrap{
-        width: 360px;
-        left: calc(50% - 180px);
+        width: 380px;
+        left: calc(50% - 190px);
     }
     .info-group {
-        width: 360px;
+        width: 380px;
     }
     .self-wrap {
-        width: 360px;
+        width: 380px;
+    }
+    .show-item {
+        width: calc(45% - 27px);
+    }
+    .show-item img {
+        max-width: 110px;
+    }
+    .show-item:not(:nth-child(4n+0)) {
+        margin-right: 0px;
+    }
+    .show-item:nth-child(odd){
+        margin-right: 83px;
     }
     .self-wrap p {
-        max-width: 180px;
+        max-width: 220px;
+        text-indent: 2rem;
         font-size: 12px;
     }
     .self-wrap img {
