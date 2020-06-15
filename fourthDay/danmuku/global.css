@@ -20,8 +20,8 @@ html, body {
 }
 #mainScreen{
     position: relative;
-    width: 800px;
-    height: 400px;
+    width: 1200px;
+    height: 600px;
     margin: 50px auto;
     background: #D9AD7C;
     border-radius: 10px;
@@ -43,6 +43,12 @@ html, body {
     position: relative;
     width: 100%;
     text-align: center;
+}
+.danmuku {
+    width: auto;
+    min-width: 180px;
+    max-width: 600px;
+    text-overflow: ellipsis;
 }
 #danmuku-input{
     position: relative;
@@ -81,4 +87,7 @@ html, body {
     position: relative;
     width: 100%;
     text-align: center;
+}
+p {
+    margin-bottom: 0;
 }

@@ -9,22 +9,23 @@
             let newDanMuku = $(`<p class="${alias}">${value}</p>`).css({
                 position: 'absolute',
                 fontSize: fs,
-                display: 'block',
+                display: 'inline-block',
                 color: `rgb(${r},${g},${b})`,
                 right: 0,
                 top: (Math.floor(Math.random() * target.height()) - 24) + "px",
             });
             newDanMuku.css({
-                width: newDanMuku.width()
+                width: $(newDanMuku).width()
             });
             target.append(newDanMuku);
             this.move(newDanMuku, target);
         },
         move: function(objectD, target) {
             let i = 0;
+            let speed = Math.floor(Math.random() * 5) + 1;
             let danmuku = setInterval(function(){
                 objectD.css({
-                    right: (i += 1) + "px"
+                    right: (i += speed) + "px"
                 });
                 if((objectD.offset().left + objectD.width()) < target.offset().left) {
                     objectD.remove();
