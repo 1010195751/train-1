@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import LazyLoad from 'react-lazyload';
 export interface ItemProps{
     title: string;
     description: string;
@@ -12,7 +13,9 @@ export const NewsItem: FC<ItemProps> = (props)=>{
     } = props;
     return (
         <div id = "news-item-main-div">
-            <img className = "news-item-img" src={ imgLink } alt={ imgLink }/>
+            <LazyLoad height = { 180 }>
+                <img className = "news-item-img" src={ imgLink } alt={ imgLink }/>
+            </LazyLoad>
             <div className = "news-item-content">
                 <p className = "news-item-category">{ title }</p>
                 <p className = "news-item-description" >{ description }</p>

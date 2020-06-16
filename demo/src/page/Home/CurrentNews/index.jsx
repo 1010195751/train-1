@@ -3,7 +3,7 @@ import Request from '../../../config/Fetch';
 import { Link } from 'react-router-dom';
 import './currentNews.scss';
 import SubTitle from '../../../components/SubTitle';
-
+import LazyLoad from 'react-lazyload';
 function CurrentNews(){
 
     const [ initial, setInitial ] = useState(false);
@@ -38,7 +38,9 @@ function CurrentNews(){
                     return (
                         <Link key = { `news-link-${index}` } to = "/detail"> 
                             <div key = { `news-item-${index}` } className = "news-item">
-                                <img className = "news-item-img" src = { item.imgLink } alt=""/>
+                                <LazyLoad height = { 120 }>
+                                    <img className = "news-item-img" src = { item.imgLink } alt=""/>
+                                </LazyLoad>
                                 <p className = "news-title">{ item.title }</p>
                                 <p className = "news-desc">{ item.desc }</p>
                             </div>

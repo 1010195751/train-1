@@ -1,6 +1,18 @@
 * {
     position: relative;
 }
+#detail-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 240px;
+    text-align: center
+}
+.detail-empty-icon {
+    position: relative;
+    top: 20px;
+    font-size: 48px;
+    font-weight: bold;
+}
 .news-status {
     position: relative;
     text-align: center;
@@ -174,7 +186,6 @@ em > code {
     height: auto;
     display: block;
     position: relative;
-    left: 5%;
     text-align: left;
     margin-bottom: 120px;
 }

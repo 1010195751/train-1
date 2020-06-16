@@ -1,9 +1,9 @@
-import React,{ useEffect, useState } from 'react';
+import React,{ useEffect, useState, Fragment } from 'react';
 import './detail.scss';
 import Request from '../../config/Fetch';
 import marked from 'marked';
 import hljs from 'highlight.js';
-import { CalendarOutlined, FireOutlined } from '@ant-design/icons';
+import { CalendarOutlined, FireOutlined, LoadingOutlined } from '@ant-design/icons';
 import 'highlight.js/styles/monokai-sublime.css';
 
 function Detail (){
@@ -51,7 +51,7 @@ function Detail (){
         })
     }
 
-    return (
+    const content = (
         <div id = "detail-note-main-div">
             <div className = 'detail-note-title'
                 dangerouslySetInnerHTML = {{ __html : marked(htmlTitle) }}
@@ -67,6 +67,16 @@ function Detail (){
             >
             </div>
         </div>
+    )
+
+    return (
+        <Fragment>
+            <div id="detail-wrap">
+            {
+                addTime === ''? <LoadingOutlined className = "detail-empty-icon" /> : content
+            }
+            </div>
+        </Fragment>
     )
 }
 

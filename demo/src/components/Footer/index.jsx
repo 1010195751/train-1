@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import Qqgroup from '../../image/qqgroup.png';
+import LazyLoad from 'react-lazyload';
 import { AimOutlined, MessageOutlined, PhoneOutlined } from '@ant-design/icons';
 function Footer(){
     return (
@@ -21,7 +22,9 @@ function Footer(){
                     </li>
                 </ul>
                 <ul className="footer-group-right">
-                    <img className ="qq-img" src = { Qqgroup } alt = "qq"/> 
+                    <LazyLoad height = { 180 }>
+                        <img className ="qq-img" src = { Qqgroup } alt = "qq"/> 
+                    </LazyLoad>
                     <p className = "li-title">扫一扫，加入实训群</p>
                 </ul>
             </div>
