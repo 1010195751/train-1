@@ -13,3 +13,6 @@
 
 #### 第六天
 * 仿企业网：https://shaolian-lh.github.io/train/demo/build/#
+
+#### 第八天
+* GitHot页面（因为内联style，没有做自适应）：https://shaolian-lh.github.io/train/reactcomponent/build/#/
