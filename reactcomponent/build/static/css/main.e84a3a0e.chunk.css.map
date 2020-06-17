@@ -1,0 +1,1 @@
+{"version":3,"sources":["global.scss"],"names":[],"mappings":"AAAA,EACI,aAAc,CACd,SAAU,CACb,UAEG,iBAAkB,CAClB,UAAW","file":"main.e84a3a0e.chunk.css","sourcesContent":["* {\r\n    margin: 0 auto;\r\n    padding: 0;\r\n}\r\nhtml, body {\r\n    position: relative;\r\n    width: 100%;\r\n}"]}
