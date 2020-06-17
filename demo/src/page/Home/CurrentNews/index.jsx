@@ -8,7 +8,8 @@ function CurrentNews(){
 
     const [ initial, setInitial ] = useState(false);
     const [ newsList, setNewsList ] = useState([]);
-
+    // eslint-disable-next-line
+    const [ pageNumber, setPageNumber ] = useState(3);
     useEffect(()=>{
         if(!initial) {
             setInitial(true);
@@ -19,20 +20,15 @@ function CurrentNews(){
 
 
     const fetchData = ()=>{
-        Request.get('news')
+        Request.get(`news?page=${pageNumber}`)
         .then((res)=>{
-            let obj = res.data;
-            let temp = [];
-            for (let i = 0; i< 4; i++) {
-                temp = [...temp, obj];
-            }
-            setNewsList(temp);
+            setNewsList(res.data.list);
         })
     }
 
     return (
         <div id = "current-news-main-div">
-            <SubTitle addBreak = {false} title = { "最新文章" } />
+            <SubTitle addBreak = {false} title = { "最新资讯" } />
             {
                 newsList.length !== 0 ? newsList.map((item, index)=>{
                     return (

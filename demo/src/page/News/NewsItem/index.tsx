@@ -13,7 +13,7 @@ export const NewsItem: FC<ItemProps> = (props)=>{
     } = props;
     return (
         <div id = "news-item-main-div">
-            <LazyLoad height = { 180 }>
+            <LazyLoad height = { 60 }>
                 <img className = "news-item-img" src={ imgLink } alt={ imgLink }/>
             </LazyLoad>
             <div className = "news-item-content">

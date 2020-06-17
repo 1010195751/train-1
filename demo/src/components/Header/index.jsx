@@ -32,7 +32,7 @@ const Header = () => {
                 <Link to="/">首页</Link>
             </Menu.Item>
             <Menu.Item className="sl-menu-item">
-                <Link to="/news">新闻</Link>
+                <Link to="/news">资讯</Link>
             </Menu.Item>
             <Menu.Item className="sl-menu-item">
                 <Link to="/about">关于我们</Link>

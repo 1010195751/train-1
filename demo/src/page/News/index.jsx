@@ -3,11 +3,13 @@ import Request from '../../config/Fetch';
 import { Link } from 'react-router-dom';
 import './news.scss';
 import NewsItem from './NewsItem';
+import { Pagination } from 'antd';
 import SubTitle from '../../components/SubTitle';
 
 function News (){
 
-    const [ listData, setListData ] = useState([]);
+    const [ newsList, setNewsList ] = useState([]);
+    const [ pageNumber, setPageNumber ] = useState(1);
     const [ initial, setInitial ] = useState(false);
 
     useEffect(()=>{
@@ -16,24 +18,26 @@ function News (){
             initData();
         }
         // eslint-disable-next-line
-    }, [ listData ])
+    }, [ newsList ])
 
-    const initData = ()=>{
-        Request.get("news")
+    const initData = (num)=>{
+        let target = num === undefined ? `news?page=${pageNumber}` : `news?page=${num}`;
+        Request.get(target)
         .then((res)=>{
-            let temp = [];
-            for(let i = 0; i< 8; i++) {
-                temp = [...temp, res.data];
-            }
-            setListData(temp);
+            setNewsList(res.data.list);
         })
     }
+
+    const changePage = (value) => {
+        setPageNumber(value);
+        initData(value);
+    } 
 
     return (
         <div id = "news-main-div">
             <SubTitle title = { "最新新闻" } />
             {
-                listData.length !== 0 && listData.map((item, index)=>{
+                newsList.length !== 0 && newsList.map((item, index)=>{
                     return (
                         <Link 
                             key = { `news-a-${index}` }
@@ -49,6 +53,12 @@ function News (){
                     );
                 })
             }
+            <Pagination 
+                current={ pageNumber } 
+                onChange={ (page)=>{ changePage(page) } } 
+                total = { 24 } 
+                size = { 8 }
+            />
         </div>
     )
 }
