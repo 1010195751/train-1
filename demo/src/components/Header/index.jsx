@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Menu, Col, Button, Dropdown } from 'antd';
 import { PicRightOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import DBD from '../../image/header.PNG';
 import './style.scss';
 const Header = () => {
 
@@ -43,8 +44,13 @@ const Header = () => {
     return (
         <div id = "header-main-div">
             <Col xs = { 0 } sm = { 24 } md = { 24 } lg = { 24 } xl = { 24 } xxl = { 24 }>
-                <p className = "header-img">DBD</p>
-                { menuContent("horizontal") }
+                <Link 
+                    to = "/" 
+                    style = {{position: "relative", width: "100%", display: "inline-block"}}
+                >
+                    <p className = "header-img"><img src={ DBD } alt="icon"/> DBD</p>
+                    { menuContent("horizontal") }
+                </Link>
             </Col>
             <Col xs = { 24 } sm = { 0 } md = { 0 } lg = { 0 } xl = { 0 } xxl = { 0 }>
                 <p className = "header-img">DBD</p>

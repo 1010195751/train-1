@@ -22,6 +22,15 @@
     font-weight: bold;
     width: 140px;
     height: 45px;
+    color: black;
+    img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
 }
 .header-menu {
     display: inline-block;
