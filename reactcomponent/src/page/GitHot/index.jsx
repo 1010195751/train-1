@@ -10,7 +10,8 @@ class GitHot extends Component {
         this.state = { 
             allList: [],
             flag: false,
-            target: props.target
+            target: props.target,
+            loading: true
         }
     }
 
@@ -28,18 +29,22 @@ class GitHot extends Component {
         } else {
             target = CONSTURL.ALL;
         }
-        await Request.get(target)
-        .then((res)=>{
-            if( !allList || allList.length === 0){
+        if(!allList || allList.length === 0) {
+            this.setState({
+                loading: true
+            })
+            await Request.get(target)
+            .then((res)=>{
                 this.setState({
-                    allList: res.data.items
+                    allList: res.data.items,
+                    loading: false
                 })
-            }
-        })
+            })
+        }
     }
 
     render() { 
-        const { allList } = this.state;
+        const { allList, loading } = this.state;
         const number_format = (num) => {
             return num && num
             .toString()
@@ -50,20 +55,22 @@ class GitHot extends Component {
             width: "100%", 
             display: "flex",
             flexWrap: "wrap",
+            padding: "0px 30px",
             justifyContent: "center",
             alignItems: "center"
         }
         const iconStyle = {
             position: "relative",
-            top: "50px",
-            fontSize: "32px",
             fontSWeight: "bold",
-            color: 'black'
+            color: 'gray'
         }
         return ( 
             <div style = { mainDivStyle }>
                 {
-                    allList.length !== 0 ? allList.map((item, index)=>{
+                    loading &&  <FontAwesomeIcon icon = { faSpinner } style = { iconStyle } spin size="4x"/>
+                }
+                {
+                    allList.length !== 0 &&  allList.map((item, index)=>{
                         return <GitItem 
                                     order = { index + 1 }
                                     key = { item.id } 
@@ -74,7 +81,7 @@ class GitHot extends Component {
                                     htmlUrl = { item.html_url } 
                                     avatar = { item.owner.avatar_url }
                                 />;
-                    }) : <FontAwesomeIcon icon = { faSpinner } style = { iconStyle } />
+                    })
                 }
             </div> 
         );

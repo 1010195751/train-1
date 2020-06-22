@@ -21,7 +21,9 @@ class GitItem extends Component {
         const mainDivStyle = {
             position: "relative", 
             display: "inline-block",
+            minWidth: "260px",
             width: "calc(25% - 60px)",
+            padding: "5px 10px",
             testAlign: 'center',
             marginBottom: '45px'
         }
